@@ -1,0 +1,136 @@
+
+|-----------------------------------------------------|
+
+CPF:    987.698.654-89
+NOME:   ANA BACANA
+SEXO:   FEMININO
+IDADE:  43
+|-----------------------------------------------------|
+
+CPF:    123.456.789-89
+NOME:   bernardina betuina
+SEXO:   feminino
+IDADE:  23
+|-----------------------------------------------------|
+
+CPF:    947.271.551-68
+NOME:   ANDREI LINO DE ANDRADE
+SEXO:   MASCULINO
+IDADE:  21
+|-----------------------------------------------------|
+
+	CPF:    947.569.987-87
+	NOME:   JUQUERLINA FRACISCANA BERALTA
+	SEXO:   FEMININO
+	IDADE:  23
+	Pontuação: 
+|-----------------------------------------------------|
+
+	CPF:    789.456.1232.00
+	NOME:   MERCULINO BERGAMOTA ESTRAVIARIO
+	SEXO:   MASCULINO
+	IDADE:  33
+	Pontuação: ALTO RISCO
+|-----------------------------------------------------|
+
+	CPF:    947.564.897-96
+	NOME:   BERTOLDO FOLOGONIO FEIJAO
+	SEXO:   MASCULINO
+	IDADE:  32
+	Pontuação: MÉDIO RISCO
+|-----------------------------------------------------|
+
+	CPF:    456.789.123-89
+	NOME:   mariquita melancolica tetrachave
+	SEXO:   feminino
+	IDADE:  21
+	Pontuação: ALTO RISCO
+|-----------------------------------------------------|
+
+	CPF:    456.456.123-88
+	NOME:   reis de freitas feitosa
+	SEXO:   masculino
+	IDADE:  22
+	Pontuação: ALTO RISCO
+|-----------------------------------------------------|
+
+	CPF:    123.456.789-98
+	NOME:   testa branca virgulino
+	SEXO:   masculino
+	IDADE:  22
+	Pontuação: MÉDIO RISCO
+|-----------------------------------------------------|
+
+	CPF:    789.456.456-88
+	NOME:   PEROBA GUEROBA DE RAIZ
+	SEXO:   MASCULINO
+	IDADE:  22
+	Pontuação: ALTO RISCO
+|-----------------------------------------------------|
+
+	CPF:    947.271.551-69
+	NOME:   andrei de andrade
+	SEXO:   masculino
+	IDADE:  34
+	Pontuação: MÉDIO RISCO
+|-----------------------------------------------------|
+
+	CPF:    123.456.789-88
+	NOME:   JOAO MOTO MOTO
+	SEXO:   MASCULINO
+	IDADE:  33
+	Pontuação: ALTO RISCO
+|-----------------------------------------------------|
+
+	CPF:    456.789.123-99
+	NOME:   ANTONIETA MAÇA BERTUNINA
+	SEXO:   FEMININO
+	IDADE:  20
+	Pontuação: MÉDIO RISCO
+|-----------------------------------------------------|
+
+	CPF:    265.568.585-66
+	NOME:   AMANDA SAMANTHA ELANTRA
+	SEXO:   FEMININO
+	IDADE:  18
+	Pontuação: ALTO RISCO
+|-----------------------------------------------------|
+
+	CPF:    13.456.7896-
+	NOME:   teste de switch perguntas
+	SEXO:   feminino
+	IDADE:  45
+	Pontuação: ALTO RISCO
+|-----------------------------------------------------|
+
+	CPF:    123456789
+	NOME:   TESTE DE SWITCH TRIAGEM
+	SEXO:   ADFF
+	IDADE:  33
+	Pontuação: MÉDIO RISCO
+|-----------------------------------------------------|
+
+	CPF:    123.456.789-99
+	NOME:   teste de variavel CHAR ALA para gravaçao de risco
+	SEXO:   adsf
+	IDADE:  456
+|-----------------------------------------------------|
+
+	CPF:    123.456.789-9
+	NOME:   teste novo de variavel ala
+	SEXO:   teste
+	IDADE:  12
+|-----------------------------------------------------|
+
+	CPF:    123.456.789-99
+	NOME:   ANDREI DE ANDRADE
+	SEXO:   MASCULINO
+	IDADE:  33
+	Pontuação: ALTO RISCO
+|-----------------------------------------------------|
+
+	CPF:    123.456.789
+	NOME:   TESTE DE VS CODE LIGADO NO GITHUB
+	SEXO:   INDEFINIDP
+	IDADE:  22
+	Pontuação: ALTO RISCO
