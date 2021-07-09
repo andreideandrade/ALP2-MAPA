@@ -19,7 +19,7 @@ const char  INICIO[45] =        "\nCadastre seus dados para ser atendido: \n",
 /*  -------------------------------  VARIAVEIS PARA REGISTRO EM ARQUIVO ---------------------------------------------   */
 char    CPF[100] =           "\n\tCPF:    ",
         NOME[210] =          "\n\tNOME:   ",
-        SEXO[50] =          "\n\tSEXO:   ",
+        SEXO[30] =          "\n\tSEXO:   ",
         IDADE[50] =         "\n\tIDADE:  ",
         RESULTADO[50]   =    "\n\tPontuação: ",
         entCPF[20],    // dadosPaciente[0]
@@ -41,26 +41,27 @@ int cadastro(int ent)
 {
     switch (ent) {
         case 0:
-            printf(CPF);
+            printf(CPF[100]);
             scanf("%s", &entCPF);
             getchar();
             break;
         case 1:
-            printf(NOME);
+            printf(NOME[210]);
             scanf("%200[^\n]s", &entNome);  // CAPTURA FRASE INTEIRA
             getchar();
             break;
         case 2:
-            printf(SEXO);
+            printf(SEXO[30]);
             scanf("%s", &entSexo);
             getchar();
             break;
         case 3:
-            printf(IDADE);
+            printf(IDADE[50]);
             scanf("%s", &entIdade);
             getchar();
             break;
     }
+    return 0;
 }
 /*  -------------------------------  FUNÇÃO CONTROLE DE RESPOSTA -----------------------------------------------------  */
 int resposta(char a)          // Entrada de teclado ( S ) para SIM e ( N ) para NÃO
