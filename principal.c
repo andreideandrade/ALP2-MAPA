@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <string.h>
-
 /*  -------------------------------  VARIAVEIS   CONSTANTES -------------------------------------------------------   */
 const char  INICIO[45] =        "\nCadastre seus dados para ser atendido: \n",
             SIMOUNAO[53] =      "\nDigite ( S ) para SIM ou ( N ) para NÃO.\n\t-->\t",
@@ -17,19 +16,19 @@ const char  INICIO[45] =        "\nCadastre seus dados para ser atendido: \n",
             PERGUNTA_9[102] =   "Esteve em contato, nos últimos 14 dias, com um caso diagnosticado com COVID-19? (10 pontos)",
             PERGUNTA_10[53] =   "Esteve em locais com grande aglomeração? (3 pontos)";
 /*  -------------------------------  VARIAVEIS PARA REGISTRO EM ARQUIVO ---------------------------------------------   */
-char    CPF[100] =           "\n\tCPF:    ",
-        NOME[210] =          "\n\tNOME:   ",
-        SEXO[30] =          "\n\tSEXO:   ",
-        IDADE[50] =         "\n\tIDADE:  ",
-        RESULTADO[50]   =    "\n\tPontuação: ",
-        entCPF[20],    // dadosPaciente[0]
-        entNome[200],   // dadosPaciente[1]
-        entSexo[30],   // dadosPaciente[2]
-        entIdade[4],  // dadosPaciente[3]
+char    CPF[100]      = "\n\tCPF:    ",
+        NOME[210]     = "\n\tNOME:   ",
+        SEXO[30]      = "\n\tSEXO:   ",
+        IDADE[50]     = "\n\tIDADE:  ",
+        RESULTADO[50] = "\n\tPontuação: ",
+        entCPF[20],
+        entNome[200],
+        entSexo[30],
+        entIdade[4],
         decide;
 
 int valores[10] = { 5, 1, 1, 1, 3, 10, 1, 1, 10, 3 },
-    soma = 0,           // dadosPaciente[4]
+    soma = 0,
     tri;
 
 /*  -------------------------------  CLONE FUNÇÃO ---------------------------------------------------------------  */
@@ -37,26 +36,25 @@ int limpa();
 int linha();
 int gravaTxt(char gravaDados[200]);
 /*  -------------------------------  FUNÇÃO CADASTRO ---------------------------------------------------------------  */
-int cadastro(int ent)
-{
+int cadastro(int ent){
     switch (ent) {
         case 0:
-            printf(CPF[100]);
+            printf(CPF);
             scanf("%s", &entCPF);
             getchar();
             break;
         case 1:
-            printf(NOME[210]);
+            printf(NOME);
             scanf("%200[^\n]s", &entNome);  // CAPTURA FRASE INTEIRA
             getchar();
             break;
         case 2:
-            printf(SEXO[30]);
+            printf(SEXO);
             scanf("%s", &entSexo);
             getchar();
             break;
         case 3:
-            printf(IDADE[50]);
+            printf(IDADE);
             scanf("%s", &entIdade);
             getchar();
             break;
@@ -64,15 +62,12 @@ int cadastro(int ent)
     return 0;
 }
 /*  -------------------------------  FUNÇÃO CONTROLE DE RESPOSTA -----------------------------------------------------  */
-int resposta(char a)          // Entrada de teclado ( S ) para SIM e ( N ) para NÃO
-{
-    if(a == 's' || a == 'S')
-    {
+int resposta(char a){          // Entrada de teclado ( S ) para SIM e ( N ) para NÃO
+    if(a == 's' || a == 'S'){
         soma = soma + valores[tri];
     }
     else if(a == 'n' || a == 'N');
-    else
-    {
+    else{
         printf("%s", SIMOUNAO);
         scanf("%s", &decide);
         resposta(decide);
@@ -80,8 +75,7 @@ int resposta(char a)          // Entrada de teclado ( S ) para SIM e ( N ) para 
     return 0;
 }
 /*  -------------------------------  FUNÇÃO TRIAGEM (Perguntas ao paciente) ------------------------------------------  */
-int triagem(int p)
-{
+int triagem(int p){
     switch (p) {
         case 0:
             printf("%s %s", PERGUNTA_1, SIMOUNAO);
@@ -114,29 +108,25 @@ int triagem(int p)
             printf("%s %s", PERGUNTA_10, SIMOUNAO);
             break;
     }
-    if (p < 10)
-    {
+    if (p < 10){
         scanf("%s", &decide);
         resposta(decide);
     }
     return 0;
 }
 
-int main()
-{
+int main(){
     setlocale(LC_ALL, "Portuguese");                         //  FORMATA PADRÃO PORTUGUES
     linha();
 /*     ------------------------------------ Cadastro de dados pessoais do paciente ---------------------------------- */
     printf(INICIO);
-    for (int cad = 0; cad < 4; cad++)
-    {
+    for (int cad = 0; cad < 4; cad++){
         cadastro(cad);
     }
     limpa();
 /*     ------------------------------------ Triagem para decisão de encaminhamentos --------------------------------- */
     linha();
-    for (tri = 0; tri < 11; ++tri)
-    {
+    for (tri = 0; tri < 11; ++tri){
         linha();
         triagem(tri);
         limpa();
@@ -147,20 +137,16 @@ int main()
     gravaTxt( strcat( NOME,   entNome   ));
     gravaTxt( strcat( SEXO,   entSexo   ));
     gravaTxt( strcat( IDADE,  entIdade  ));
-    
 /*     ------------------------ Encaminha paciente para a ALA de acordo com sintomas  -------------------------------- */
-    if(soma > 19)
-    {      
+    if(soma > 19){
         gravaTxt(strcat(RESULTADO,"ALTO RISCO"));
         printf("\n\n\tDirija-se para a ala de alto risco.");
     }
-    else if(soma > 9)
-    {
-        gravaTxt(strcat(RESULTADO,"MÉDIO RISCO"));  
+    else if(soma > 9){
+        gravaTxt(strcat(RESULTADO,"MÉDIO RISCO"));
         printf("\n\n\tDirija-se para ala de médio risco.");
     }
-    else
-    {
+    else{
         gravaTxt(strcat(RESULTADO,"BAIXO RISCO"));
         printf("\n\n\tDirija-se para ala de baixo risco.");
     }
@@ -171,18 +157,16 @@ int main()
 
     limpa();
     linha();
-/*     -------------------------------------------------------------------------------------------------------------- */    
+/*     -------------------------------------------------------------------------------------------------------------- */
 return 0;
 }   // fim do MAIN
 /*  ---------------------------------   FUNÇÃO CRIA E GRAVA DADOS DA MEMORIA EM ARQUIVO ----------------------------- */
-int gravaTxt(char gravaDados[200])
-{
+int gravaTxt(char gravaDados[200]){
     FILE *ponteiroTXT; // cria um ponteiro para o arquivo
 
     ponteiroTXT = fopen("Registro.txt", "a");   // ABRE O ARQUIVO
 
-    if(ponteiroTXT == NULL) // TESTE SE O ARQUIVO FOI ABERTO COM SUCESSO.
-    {
+    if(ponteiroTXT == NULL){ // TESTE SE O ARQUIVO FOI ABERTO COM SUCESSO.
         printf("Erro na abertura do arquivo!");
         return 1;
     }
@@ -192,16 +176,14 @@ int gravaTxt(char gravaDados[200])
     fclose(ponteiroTXT);    // FECHA ARQUIVO
     return 0;
 }
-
 /*     -------------------------------  Mantem tela e cache limpos -------------------------------------------------   */
-int limpa()                                                   
-{
-    fflush(stdin);  
-    system("clear");
+int limpa(){
+    fflush(stdin);
+    // system("cls");   // Para WINDOWS
+    system("clear");    // Para LINUX
 }
 /*     -------------------------------  Imprime uma linha para formatação -------------------------------------------   */
-int linha()                                                   
-{
+int linha(){
     printf("\n");
     for (int i = 0; i < 52; i++) {
         printf("-");
